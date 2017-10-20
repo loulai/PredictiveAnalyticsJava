@@ -1,0 +1,43 @@
+In anticipation of his upcoming conference presentation, Wall Street and the New Data Paradigm at Predictive Analytics World for Financial in New York, Oct 29-Nov 2, 2017, we asked Anasse Bari, Clinical Assistant Professor of Computer Science at New York University, a few questions about his work in predictive analytics.
+
+An eminent figure in the realm of predictive analytics, Bari is conducting research on developing new biologically inspired algorithms for modeling the economy and financial markets. His research focuses on designing an evidence-based decision support framework that uses deductive and inductive processes to better understand financial markets.
+
+Q: Harvard Business Review proclaimed that data scientist is the Sexiest Job of the 21st Century. In your role at New York University, how do you prepare your students to become data scientists?
+
+A: In the graduate predictive analytics course I teach, my aim is to equip the next generation of data scientists for a successful profession in data analytics by teaching them the algorithms and tools they need to discover hidden similarities in data, effectively mine decisions’ rules, and ultimately, predict the outcomes of specific events.
+
+To do so, I tend to take a more practical approach by using real life cases, such as large-scale targeted marketing or gene expression microarray data classification of cancer.
+
+However, taking one data science class or knowing programming languages, such as R or Python, does not necessarily make one a data scientist. Nonetheless, it can expose one to the complexities of the subject and motivate one to learn more. Becoming a data scientist is a long journey that involves a steep learning curve, hard work and curiosity.
+
+In my opinion, what distinguishes a data scientist is the possession of a unique combination of technical skills, critical thinking and communication skills.
+
+A data scientist should have a passion for analyzing data. They should not only have a solidified understanding of data engineering principles, of supervised and unsupervised learning algorithms, and of large scale frameworks to process millions of streamed rows of data, but they must also have substantial data-gathering and -cleaning skills, and must have accumulated applied data science experience.
+
+Moreover, a data scientist should also be a creative strategist who can design solutions that can generate actionable insights.  To help my students foster a passion for analytics, I ask them to complete a semester long group project as part of their coursework where they have to adopt the cross-industry standard process for data mining (CRISP-DM) and design a data analytic that addresses a problem of their choice. Every semester I am impressed by the creativity of my students. Some projects that have been completed include:
+
+Predicting rent prices in New York City using online restaurant reviews
+Recommending courses to students with the aim of maximizing their success rates
+Extracting predictive features that make a song popular
+Using open data to forecast hot spots in NYC at a given time using biking data to potentially help ease congestion in the city
+Most of these projects, including their approaches and results, have been presented to wide audiences at major conferences.
+
+Q: In your research work with predictive analytics in finance, what behavior or outcome do your models predict?
+
+A: Access to information has always been the sine qua non to being successful on Wall Street. Investors base their decisions on traditional data sources, such as quarterly earnings reports, financial statement filings to the U.S. Securities and Exchange Commission (SEC), and sometimes the so-called “expert networks.”
+
+My research on predictive analytics in finance involves developing an evidence-based decision support framework to model financial markets. The framework mines data sources to generate an array of hypotheses and their associated evidence. In one part of our study, we build models that can predict earnings and post-earnings of stock-price movements by probing the wisdom of crowds using alternative data sources.
+
+Alternative Data (“alt-data”) is a relatively new term in the world of investment banking.  It refers to data collected from non-traditional financial data sources to obtain meaningful insights about the entity in question beyond what is easily available from traditional sources. In investment banking, for instance, data scientists mine satellite images of shopping mall parking lots as an alternative data source to predict revenue numbers of the business entity in question.
+
+The notion of the wisdom of crowds originated from Aristotle’s “doctrine of the wisdom of the multitude.”  It refers to the idea that large groups collectively can make smarter decisions than individual experts. This principle was adopted in many fields, such as behavioral economics, politics and physiology. In the world of predictive analytics, collective judgment can help in making accurate predictions. I believe that a crowd becomes wise and powerful when it is diverse. Individual opinions that are diverse tend to emerge from a wise crowd whose insights can lead to good predictions.  However, a crowd might lose its wisdom when its members are influenced by each other’s ideas.  It is important to know who is in the crowd. In one experiment, the predictive models we developed that mined alternative data sources from the wisdom of online crowds yielded better stock market predictions than the Wall Street consensus. The Street consensus is usually derived from forecasts made by a crowd of analysts who provide research coverage on a specific company or market segment. However, this crowd is inter-influential, which does not always yield accurate predictions.
+
+We can now prove that movements in the stock market are driven by alternative data sources, such as ontologies extracted from news articles, collective opinion mining of micro-blogs, online search trends and the wisdom of customer crowds. Alternative data promises access to new information that has the potential to add value to the traditional investment process. Predictive analytics can help in interrogating alternative data sources and connecting the dots to help the investor make better decisions.
+
+Q: How does predictive analytics deliver value to hedge funds and Wall Street firms? What is one specific way in which it can actively drive decisions or operations?
+
+A: PA is already reshaping the financial landscape. Trading for the most part has become automated, and portfolios can be automatically generated. The next wave is about deploying predictive models that can connect the dots from different alternative data sources to provide an edge to the decision-making process for investors. Shipping data, for instance, has been used to forecast Apple iPhone sales. Since most Apple products are produced in China, it was discovered that there is a correlation and causality between Apple shipment numbers and iPhone sales.
+
+In another scenario, image recognition algorithms were applied to the car park data of a major US retailer. These algorithms structure raw images into a data matrix of average numbers of cars per parking lot on a given day. It was discovered that the percentage change in car count could in fact be a predictive feature of the revenue of the retail store in question. Similarly, many hedge funds are applying data classification algorithms to satellite photos of agricultural fields to predict crop yields. In health care, analyzing drug trial data by geography, gender and demographics can help healthcare providers target the right client base.
+
+In the world of finance, one key lesson is the influence of psychology on the behavior of financial markets. Many investors can be “irrationally exuberant” when making financial decisions. While in some cases, irrational exuberance can reap considerable returns for hedge fund managers, it does not always prepare them for unfavorable outcomes. Predictive analytics does not have emotions, or sensitivities. Hence, relying on an ensemble of predictive models that can learn from the wisdom of crowds as a decision advisor can help mitigate irrational exuberance among investors.

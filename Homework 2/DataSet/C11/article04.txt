@@ -1,0 +1,68 @@
+Space Shuttle's SIR-C/X-SAR Detects Volcanoes in Western Kunlun Mountains
+
+Imaging-radar remote sensing is one of the spearhead 
+technologies of Earth-observation technology of the 1990s. SAR (Synthetic 
+aperture radar) side-transmitted electromagnetic waves are very sensitive to the 
+rough surface of the earth and can highlight topographic data and articulate 
+surface features to a fine degree, making them particularly useful for finding 
+volcanoes. Reference 1 discusses the consistent success of airborne and 
+spaceborne imaging-radar remote sensing technology in finding volcanoes on earth 
+and on the other celestial bodies. 
+
+The Western Kunlun Mountains are located in the cross-connecting zone between 
+the Tarim and Tibet-Indian tectonic plates, which has been an area of interest 
+to the geoscience world for a long time, especially the volcanic activity in the 
+area since the Cenozoic Era. The area is particularly important to the study of 
+the laws of tectonic structural activities and geological development. The 
+Shuttle Imaging Radar-C (SIR-C) system is the most advanced imaging-radar system 
+of this century. It was the first multiband quadripolar simultaneous imaging SAR 
+system to operate at an earth-orbit altitude. In April 1994, the Space Shuttle 
+Endeavor carried this system over China's Western Kunlun Mountain area and 
+captured multiband, multipolarization imaging-radar data. This paper used SIR-C 
+radar imagery to probe the volcano group at northeastern Aksay Lake (Aksayqin 
+Hu) and the upper reaches of Quanshuigou in the Western Kunlun Mountains above 
+5,400 meters ASL. 
+
+Earlier research (reference 2) credited this volcanic area with only four 
+volcanic cones, and nine were found in this study, including the four recorded 
+in ref. 2, which were clearly evident for their mass and cone formations. They 
+are surrounded by a cover of Quaternary sediment, easy to detect in the field. 
+The largest volcanic cone is an egg shaped formation 4 km2 in area, and the 
+smaller ones are less than 1 km2. Five volcanic cones were found for the first 
+time by using the multiband, multipolarized radar images. They appear as 
+circular radial volcanoes at about the same rolling elevation as the surrounding 
+topography. The base areas of these cones are less than 1 km2, and their area of 
+spread might be 3 to 4 km2. Their lava flows are of two types: block lava, 
+mainly distributed chaotically around the broken volcanoes, the largest blocks 
+of which may be over one meter high, and they are generally vesicular and 
+amygdaloidal in structure. The other type is ropey lava which is mainly 
+distributed on the south side of the volcanoes. They appear as nearly level 
+fan-shaped flows 10 to 12 km wide that extend in a north-south direction for 
+about 23 km. The surface appears as flat pancakes with scattered fine vesicular 
+lava blocks. 
+
+Petrochemical, rare earth and microelement analysis done on seven volcanic 
+samples taken from the area found that the volcanic rock is phonolitic tephrite 
+with over 0.8 percent Na2O + K2O content, and there is more K2O than Na2O which 
+places it in the typical potassium basaltic compound described by Morrison. The 
+rare earth elements were quite rich in light rare earths and the negative 
+anomalies of europium were basically absent. Such lithophile elements as Rb, Sr, 
+Ba, Th, Nb, Ta, Zr and Hf were abundant among the microelements. The age of K-Ar 
+isotopes in the volcanic rock of the area is 7.45 to 3.97 Ma, and for Rb-Sr 
+isotopes the linear-time age is 4.65 Ma, which puts it in the Pliocene to 
+Miocene epochs. The ab initio 87Sr/86Sr change was in the range of 0.708,003 to 
+0.708,440, and the 143Nd/144Nd change was 0.512,382 to 0.512,426, which 
+demonstrates high 87Sr/86Sr and low 143Nd/144Nd characteristics. 
+The awful environment, treacherous terrain and high altitude make the western 
+Kunlun Mountains a difficult place in which to do field work, and the excellent 
+capabilities of imaging-radar to detect volcanic formations make it an ideal 
+means of volcanic exploration in that area. 
+
+References 
+
+1. Gaddis L.R., Mouginis-Mark P.J., Singer R., et al. Geologic analyses of 
+Shuttle Imaging Radar (SIR-B) date of Kilauea volcano, Hawaii. Bulletin of the 
+Geological Society of America, 1989, 101:317-374. 
+
+2. Xinjiang Uygur AR Geology and Mining Bureau. Xinjiang Uygur AR Regional 
+Geology Journal, No 32; Beijing, Geology Press, 1993. 

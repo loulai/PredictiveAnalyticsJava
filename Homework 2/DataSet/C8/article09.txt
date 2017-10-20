@@ -1,0 +1,405 @@
+Status, Requirements for Nation's Spaceborne-SAR Ocean Applications
+
+1. Status of Foreign and Domestic Spaceborne-SAR Ocean Applications and Applied 
+Technology 
+1. Status of spaceborne-SAR ocean applications 
+Spaceborne-SAR (synthetic aperture radar) has captured the attention of 
+oceanographic circles worldwide for its all-weather full-time global-ocean 
+high-resolution imaging and observation capabilities. Since the launch of the 
+European Remote-Sensing Satellite, (ERS-1) over a decade ago, various nations 
+have committed voluminous manpower and resources to SAR ocean applied research. 
+SAR ocean applications are already providing notable social and economic 
+benefits; its resource applications are expanding daily in breadth and depth, 
+and its development trend is from qualitative to quantitative determinations and 
+from experimental to service applications. The full-scale spaceborne-SAR 
+resources applications stage will accompany the arrival of the new century. 
+Spaceborne-SAR ocean remote sensing in China began in the early 1990s. The State 
+"863" Program's Spaceborne-SAR Ocean Applied Research and "Sino-Canadian Space 
+SAR Sea-Ice Experimental Applied Research" projects were completed in the Eighth 
+5-Year Plan (FYP). 
+China is now engaged in the "China Littoral Radarsat Resources Applied Research" 
+and "Radarsat Sea-Ice Monitoring Research" projects. China's efforts in 
+spaceborne-SAR ocean applications over the past 6 years have narrowed the gap 
+with advanced world levels and laid a foundation for further development in SAR 
+applied research. 
+
+(1) Ocean-Wave Research 
+One of the important benefits of spaceborne-SAR ocean applications is the 
+ability to observe waves on the surface of the ocean from space, and have direct 
+access to their length, direction, diffraction and refraction characteristics. 
+There are three primary applications for spaceborne-SAR ocean-wave data: ocean 
+wave forecasting, ocean engineering, and oceanography. Western European 
+countries are using two-dimensional directional wave-spectrum data from ERS SAR 
+observations for ocean-wave count forecasts to improve the accuracy of ocean 
+wave forecasting. Chinese and Dutch scientists are using ERS-1 and Japanese 
+JERS-1 SAR data to study the effects of ocean waves on coastal erosion and 
+inshore engineering. U.S. scientists and others are using wide-range ocean-wave 
+field information from spaceborne-SAR to study the formation and spread of long 
+ocean waves on the open seas and the diffraction and refraction of inshore 
+waves. These three applications aspects are now in the early stages of research, 
+but they will be important to future spaceborne-SAR ocean-wave data applications 
+research. 
+
+(2) Internal waves 
+SAR imaging by Seasat-1 satellites has produced voluminous internal-wave images 
+of various seas around the world, providing a wealth of resources for applied 
+research on internal waves, and the SAR data applications have exposed many of 
+the temporo-spatial distribution characteristics of internal waves. 
+Information on relative wave group velocities, thermocline depths, seawater 
+density variations and internal wave generation sources have been obtained via 
+measurements of wave-group space intervals. These studies have vastly increased 
+man's understanding of internal waves. Spaceborne-SAR internal-wave data are now 
+being used in marine military and economic fields (such as submarine actions and 
+offshore oil platform design). Real-time spaceborne-SAR internal-wave imaging is 
+also being used to direct on-site scientific recording activities by 
+oceanographic research ships, thereby cutting research costs. Chinese scientists 
+are also engaged in spaceborne-SAR ocean internal-wave observation research, and 
+are studying the spatial characteristics and generation mechanisms of internal 
+waves in the northwestern Dongsha islands [Pratas group]. 
+
+(3) Shallow-water depths and underwater topography 
+Military and economic benefits of conducting shallow-water bathymetric and 
+underwater topographic mensuration by spaceborne-SAR have captured worldwide 
+attention. Since the launch of the U.S. Seasat-1 in 1978, the U.S., FSU, and 
+west European nations have made great advances in spaceborne-SAR shallow-water 
+bathymetric and underwater topographic research. For example, the "Water-Depth 
+Measuring System" developed by the Netherlands has used spaceborne-SAR data and 
+other measurement resources to chart water depths over a wide ocean area and 
+experimental zones with absolute measuring accuracy down to 30 centimeters. 
+Chinese scientists have used ERS-1 SAR imagery to probe the underwater 
+topography of the northwest Penglai, Shandong sea area, and they have obtained 
+detailed landform characteristics of the Dengzhou shoals. Spaceborne-SAR 
+shallow-water bathymetry and underwater topography are still in the qualitative 
+description stage, but quantitative investigations are the future development 
+trend. 
+
+(4) Sea ice 
+Spaceborne-SAR has all-weather and full-time operational advantages. It is 
+particularly effective for monitoring polar and high-latitude sea ice. Seasat-1, 
+ERS-1, ERS-2 and Radarsat are all equipped for sea-ice monitoring. 
+Spaceborne-SAR sea-ice monitoring has now reached the services and sea-ice 
+information product stage. Norway now issues products based on ERS SAR imaging 
+that describe sea-ice density, type, delineation and drift, and provides 
+real-time sea-ice forecast services to oil platforms, ships and icebreakers. In 
+1995, relevant Chinese units cooperated with the Canadian Remote-Sensing Center 
+in spaceborne-SAR sea-ice monitoring applications experiments in Liaodong Bay 
+with good results. Scientists are also using spaceborne-SAR sea-ice data to 
+study sea-ice dynamics and temperature coupling processes and the interworkings 
+of sea-ice and the ocean, and global temperature change. 
+
+(5) Coastal belt 
+Radar backscatter imaging provides new data for coastal-belt remote sensing. 
+Spaceborne-SAR imaging of coastal belts is used mainly for coastal-belt resource 
+investigations and the monitoring of dynamic changes in the environment. Through 
+ERS-1 SAR image decoding, concerned Chinese units have charted the geomorphic 
+features of the Penglai and Yantai coastal belts of Shandong. The United States 
+and the Netherlands have used spaceborne-SAR data to monitor the dynamic changes 
+of intertidal zones. 
+
+(6) Marine oil pollution 
+Spaceborne-SAR monitoring of oil pollution at sea is primarily used for 
+detecting oil pollution, estimating its range, and monitoring its spread. 
+However, it is not yet possible to estimate the thickness of oil slicks or 
+distinguish the types of oil. Some developed countries are setting up oil 
+pollution monitoring systems that encompass the use of spaceborne SAR, aircraft 
+and ships. They are setting up oil-pollution monitoring services, something that 
+China has not yet attempted. 
+
+(7) Surface ships 
+At certain wind speeds and sea surface conditions spaceborne-SAR can readily 
+ascertain the sizes, positions, courses and speeds of surface ships. This 
+information is obtained for naval ships, monitoring navigation channels and 
+assisting ships in distress. U.S. scientists have recently been studying the use 
+of density spectra and wave-gradient change spectra from spaceborne-SAR images 
+of ship wakes to calculate the contours of cruising ships. It does not yet 
+satisfy applicability requirements, but it is an important facet of 
+spaceborne-SAR ship detection research. 
+
+(8) Submarines 
+Detection and tracking of enemy submarines are critical challenges of ASW, and 
+the U.S., FSU, and other western nations have been working steadily for many 
+years to develop spaceborne-SAR submarine-detection technology. The U.S. can now 
+find the wakes of submarines cruising offshore under moderate wind conditions, 
+and large sums have been expended to develop new submarine detection methods by 
+spaceborne-SAR under all sea conditions. During the 8th FYP, China began 
+laboratory research into the principles of submarine detection, and applying 
+only a theoretical understanding of the factors of applying SAR in offshore 
+light-wind conditions, the laboratory has proposed an entirely new improved 
+technology and developed a laboratory detection system that can be used under 
+any conditions. This system represents a breakthrough in theory and technology. 
+2. The Present State of Spaceborne-SAR Ocean Applied Technology 
+Various countries, while putting great effort into spaceborne-SAR ocean 
+applications research, are also paying much attention to the development of 
+spaceborne-SAR ocean applied technology. There has been considerable progress, 
+and some new applied technology meets service application requirements. In 
+general, however, the technology is still quite new and limited to pelagic 
+applications. Developing applied technology and putting it to use are still big 
+tasks ahead for spaceborne-SAR ocean remote-sensing. China's spaceborne-SAR 
+ocean applied technology research began in 1991, and has grown rather well 
+through such programs as the "ERS-1 remote sensing of sea temperatures, ocean 
+waves, sea ice and sea-surface elevation," "Airborne submarine-wake detection 
+and tracking system," and "SAR sea-surface characteristics imaging mechanisms 
+and information extraction methods research." In many aspects it is up to the 
+international levels of the early 1990s, but it is still well behind today's 
+advanced world level. 
+
+(1) The essentials of applied technology 
+Spaceborne-SAR applied technology involves radar and sea surface interactions, 
+oceanic processes and phenomena relative to Bragg wave modulation mechanisms, 
+and spaceborne-SAR sea-surface image processing. Research on these mechanisms is 
+the key to making breakthroughs in spaceborne-SAR applied technology, and it is 
+the basis for optimum selection of SAR parameters and the processing and 
+interpretation of images. 
+Radar-wave/sea-surface interaction is a very complex process. Much 
+experimentation and many years of theoretical research have not produced the 
+best model for describing the sea-surface radar backscatter process. Two-scale 
+models (also called combined models), which are considered the best models 
+today, take into account resonant scatter, and include the long-wave induced 
+Kirchoff scatter action on the radar-backscatter cross section (RCS), which 
+satisfactorily explains most of the observed sea-surface radar echo properties. 
+But, two-scale modeling cannot describe radar backscatter under all ocean 
+environmental conditions, and SAR imaging qualitative interpretation 
+requirements are a difficult challenge. Therefore, further experimentation and 
+theoretical research is needed to correct current theories and models. 
+Two-scale modeling shows that when the angle of incidence is in the 20-70 degree 
+range, Bragg scatter is the main scatter on the ocean surface, the short waves 
+being chiefly radar waves. What is recorded by spaceborne-SAR imaging is the 
+spatial distribution of the short waves. The other oceanic processes and 
+phenomena are observed by the SAR through changes in the spatial distribution of 
+the short waves, which makes the extraction of information on oceanic processes 
+and phenomena of utmost importance in gaining an understanding of their Bragg 
+wave modulation mechanisms. The modulation mechanisms, such as wave-wave and 
+wave-flow interactions, are fairly well understood, but other modulation 
+mechanisms await further study, and existing models need improvement. 
+The Doppler shift of radar echo signals and random ocean movement complicates 
+the process of spaceborne-SAR sea-surface imaging. For example, ocean movement 
+causes nonlinear distortion in spaceborne-SAR sea-surface images, tending to cut 
+off high wave counts and displace their peak values. Several studies have been 
+done worldwide to clear up spaceborne-SAR image processing, including simulation 
+of spaceborne-SAR sea-surface image processing, and synchronized on-site and 
+spaceborne-SAR observations. Chinese scientists have used interferometric SAR 
+(INSAR) theory to probe spaceborne SAR ocean-wave image processing, and have 
+achieved advances in their knowledge. 
+
+(2) Applied technology 
+Spaceborne-SAR marine applied technology primarily involves three activities: 
+essential marine factors inversion technology, marine target detection and 
+discrimination technology, and ocean information extraction technology. 
+Advancements in basic applied technology research leads to advances in 
+development of applied technology, which is then followed by advancements in 
+spaceborne-SAR ocean applications. 
+Ocean-wave spectrum and shallow-water depth inversion techniques are key aspects 
+in the study of essential marine inversion technology research. The Monte Carlo 
+technique was once used internationally in converting ocean wave spectra and SAR 
+imaging spectra. The advent of relational nonlinear conversion in 1990 propelled 
+the advancement of ocean-wave spectrum inversion techniques by boosting accuracy 
+and speed of inversion. Advances have also been made recently in ocean-wave 
+spectrum inversion techniques for SAR imaging spectra. The wave refraction 
+principle for water-depth inversion models is quite easy to use, with familiar 
+technology well developed in recent years. Water-depth inversion technology, 
+based on the hydrodynamic modulation theory, has developed rapidly, and should 
+be nearing the application stage in the near future. Chinese scientists have 
+also been forging ahead with research on ocean-wave spectrum and shallow-water 
+depth inversion technology, but they are still well behind foreign efforts 
+overall. 
+The major objectives of ocean target monitoring and discrimination are ocean 
+oil-pollution monitoring and ship identification. These are now realities in a 
+number of western countries. and are being improved. Automatic rapid monitoring 
+and identification technology is also under development. Ocean target monitoring 
+and recognition technology has not yet been formally initiated in China. 
+Ocean information extraction technology includes technology for the extraction 
+of sea ice, coastal belt and internal wave information. International 
+developments include visual interpretation and computerized automatic 
+information extraction technology capable of extracting qualitative, 
+semi-quantitative and quantitative ocean information. Ocean information 
+extraction technology, however, is still far short of meeting ocean application 
+requirements, and new developments here are urgently needed. China has done much 
+work on and is well grounded in ocean information extraction technical 
+development. 
+
+(3) Image processing 
+Speckle noise eradication and image compounding are two primary aspects of 
+spaceborne-SAR image processing. Speckle noise is created by the coherence of 
+backscatter signals from the ocean's surface and radar transmission signals. The 
+speckle noise effect inhibits image discrimination and application. There are 
+two methods of speckle noise eradication in use domestically and abroad: 
+multi-look processing before imaging and filtering after imaging. However, even 
+after multi-look processing, SAR images still consist of about 30 percent noise; 
+and filtering during speckle noise eradication blurs peripheral information. 
+Speckle noise eradication thus remains a difficult question. Combined SAR 
+images, and combining SAR images with thematic mapping makes extraction of 
+coastal belt and ocean information easier and more accurate. A number of 
+techniques for combining images now exist, but they need improvement; for 
+example, accurate geometric matching of images and methods of combining 
+frequency bands need more study. 
+2. China's Spaceborne SAR-Ocean Applications Requirements 
+China is a major maritime nation with over 18,000 kilometers (km) of coastline 
+and 4.85 million square km of natural ocean area covering the Bo Hai, Yellow 
+Sea, and the East and South China Seas. The "International Convention on the Law 
+of the Sea" stipulates, and China advocates, China's territorial domain over 
+about 3 million square km of territorial waters, equivalent to 24 percent of 
+China's territory. China's extensive territorial seas and coastal belts are rich 
+in water, mining, biological, chemical, petroleum, power generation, spatial and 
+tourism resources. The littoral area is an important physical base for China's 
+economic and social development. Over 400 million people live in the coastal 
+zones and the gross value of maritime economic output is up to 140 billion yuan. 
+The gross value of industrial and agricultural output of the coastal zones 
+equals about 60 percent of the gross national output. The ocean and coastal belt 
+supports and stimulates the economic development of the entire coastal and 
+inland areas. As the Four Modernizations progress, China's social and economic 
+development will become more and more dependent on the ocean and coastal belt. 
+China's coastal social and economic development profits from the ocean and it is 
+limited by the ocean. The ocean controls atmospheric circulation and the natural 
+water cycle, changes in the geographical temperature distribution patterns, 
+affects climate change, and creates weather hazards. Ocean-bred disasters 
+threaten human life and economic losses in the coastal zones. Unwise development 
+and use of the ocean and coastal belts are the sources of a range of resource 
+and environmental problems. This is why sensible development and effective 
+marine protection are indispensable components of China's resources and 
+environmental development efforts. 
+Global economic development, runaway population growth and depletion of land 
+resources are causing maritime nations to increase regard of their maritime 
+territories and resources. Since the passage of the U.N. International 
+Convention on the Law of the Sea in 1982 stipulating 12-nautical-mile 
+territorial rights and 200-mile special economic zones, the demarcation of 
+territorial seas between China and its neighboring countries has become a daily 
+growing problem. Russia, Japan, North and South Korea, Vietnam, the 
+Phillippines, Indonesia, Brunei and Malaysia have singularly announced their 
+jurisdictional claims on territories and islands belonging to China. China is 
+faced with the urgent task of protecting its maritime rights. China's long-range 
+mission, extending from now and into the next century, will be the protection of 
+its maritime rights, rational development of its marine resources, scientific 
+protection of the marine environment, and the prevention and reduction of 
+oceanic disasters. Mastery of science and technology is essential to 
+accomplishing these goals. A critical ingredient of that S&T is ocean 
+remote-sensing technology. Ocean remote-sensing technology can provide 
+instantaneous information covering a wide range of ocean space, revealing the 
+spatial characteristics of a myriad of rapidly changing essential marine 
+elements, such as chlorophyll and ocean waves, not obtainable instantaneously by 
+other methods. Ocean remote-sensing technology can provide continuous access to 
+oceanic data globally for many years, even decades. It is very difficult to 
+monitor even partial ocean areas by conventional investigative methods, not to 
+mention global coverage. The measurement of essential ocean ingredients such as 
+the roughness of the ocean surface can only be done by remote sensing. Ocean 
+remote-sensing technology and conventional investigative methods together form a 
+three-dimensional coastal, spatial, surface and underwater ocean observation 
+system for extracting data of utmost importance in the fields of maritime 
+rights, resources, the environment, disaster reduction and scientific research. 
+The spaceborne SAR, one of the important ocean remote-sensing instruments, is 
+capable of multiband, multipolarization, multi-look and 
+multi-angle-of-depression observation. Unlike visual and IR remote-sensing 
+instruments, it has all-weather 24-hour observation capability. Also, it has a 
+high-spatial resolution imaging capability that radar altimeters and microwave 
+radiometers do not have. It can observe ocean waves, internal waves, sea-floor 
+topography, shallow water depths, peripheral currents, eddies and crests. It can 
+monitor oil film pollution, and the movements of ships and coastal belts. It is 
+unmatched in applications potential in the fields of maritime rights, resources, 
+the environment, disaster reduction and scientific research. 
+There are four pressing needs for the application of spaceborne-SAR technology 
+in Chinese territorial seas: 
+
+(1) Guard territorial integrity and preserve the unity of the country. 
+China must guard its territorial integrity and preserve its unity through 
+peaceful negotiations and military struggle. Spaceborne SAR can supply ocean 
+environment, island and coastal belt data for settling territorial disputes 
+between China and its neighbors, especially data unobtainable by shipborne and 
+airborne remote sensors that are affected by climatic conditions. Spaceborne SAR 
+can supply marine target, environment, landing and counterintelligence 
+information for military actions that guard China's territorial integrity and 
+keep the homeland intact, guaranteeing naval battlefield initiative and the 
+success of military operations. 
+
+(2) The development of marine resources 
+China is now in a period of major development of its marine resources. Marine 
+environmental information is extremely important to the development of marine 
+resources, ocean engineering planning, and on-site operations at sea. 
+Bathymetric and bottom profile data are indispensable to shallow-water oil and 
+gas prospecting and extraction, laying submarine pipelines and communications 
+cables, surface transportation and shipping, ocean fishing and aquaculture. 
+Offshore petroleum construction planning demands the fullest understanding local 
+ocean waves and internal waves. On-site operations at sea and marine economic 
+activities need data on ocean waves and sea-ice conditions. The shallow-water 
+depth, topographical, ocean wave, internal wave and sea-ice data obtained by 
+spaceborne SAR are directly applicable to the development of marine resources, 
+offshore engineering planning and on-site operations. 
+
+(3) Protecting the ocean environment 
+The major ocean environmental problem today is pollution. In China, ocean 
+pollution is caused mainly by oil and foul water. Offshore oil pollution comes 
+from land source run-off, offshore oil-well leaks, and discharge from ships. 
+There are over 250 sources of oil pollution along the China coast collectively 
+discharging 100,000 tons and more of effluent every year. With the rapid 
+development of offshore oil and gas, blowouts and oil discharges flow 
+incessantly, and the volume is hard to measure. Tanker accidents are common. 
+Some river estuaries and bays are excessively polluted and pose a serious threat 
+to the marine ecological environment and biodiversity, directly affecting the 
+development of the coastal economy and social well being. The State Oceanic 
+Administration (SOA) has two ocean observation aircraft for monitoring overflow 
+oil pollution at sea, but rising costs limit the number of sorties and there is 
+much they do not see. Spaceborne SAR can provide overflow oil pollution 
+monitoring services fast, at high resolution, wide range, full time, and do it 
+in all kinds of weather. 
+
+(4) Disaster reduction and prevention 
+China suffers major marine disasters that cause billions of yuan in losses per 
+year, tens of billions in bad years. As marine industries develop, and offshore 
+and coastal belt economic activities increase daily, losses due to marine 
+disasters will keep rising. 
+Ocean waves are a major marine hazard. About 80 percent of all marine calamities 
+are caused by ocean waves. Statistics show that an average of over 2,600 ships 
+are sunk and 520 lives are lost annually, the worst case being 1985 when 4,236 
+ships capsized and sank, and 1,030 people died. Ocean-wave monitoring and 
+forecasting are urgently needed in order to reduce economic losses and loss of 
+life due to ocean-wave calamities. Measuring surface-wave fields by spaceborne 
+SAR is the effective way to do that. It can deliver three-dimensional ocean-wave 
+directional spectrum data for ocean-wave forecasting with greater accuracy and 
+timeliness. 
+The northern parts of the Bo Hai and Yellow Sea freeze up to some degree every 
+winter, and sea ice hampers marine resource development and transportation. 
+During 1969, a bad year on the Bo Hai, the Hai-2 oil platform was knocked down 
+by ice flows, a piling tension cable of the Hai-1 oil well was severed by ice, 
+and 50 or more ships were hampered by ice. This resulted in economic losses 
+amounting to several hundred million yuan. Spaceborne SAR can accurately 
+delineate the boundaries, types, density and open-water spaces among ice flows 
+to help select navigation routes and aid marine operations. Spaceborne-SAR data 
+coordinated with surface temperature and weather data can make sea-ice 
+forecasting more accurate and greatly reduce sea-ice-created hazards and 
+damages. 
+3. Suggestions 
+R&D of airborne/spaceborne-SAR ocean-imaging mechanisms, ocean applied 
+technology and applications begun in the 1980s by units of the SOA, State 
+Education Commission, and CAS have broken new ground at home and earned the 
+attention of colleagues abroad. A corps of highly-qualified scientists and 
+technicians has emerged, rich in experience and highly skilled in spaceborne-SAR 
+ocean remote-sensing technology. 
+China's remote-sensing satellite ground station began receiving SAR data from 
+ERS-1 and JERS-1 satellites in 1994, and Radarsat data was in the works in 1997. 
+A lot of SAR imagery has been gathered on China's ocean space. The European 
+Space Agency, Japan and Canada, sparing no effort to commercialize SAR data, 
+have pushed the sale of SAR products to users throughout the world. The stage 
+has thus been set for China's own SAR ocean applications developmental research. 
+
+Considering China's needs for ocean applications, its technological base and 
+research conditions, and the developmental trend in international spaceborne SAR 
+ocean remote sensing, the following areas of research are suggested for China in 
+the near term: 
+
+(1) Basic research on spaceborne-SAR ocean applications: Radar-wave ocean 
+surface scatter characteristics research; research on modulation mechanisms of 
+ocean processes and Bragg waves; spaceborne-SAR image processing research; and 
+spaceborne-SAR ocean image modeling. 
+
+(2) Research on spaceborne-SAR ocean applied technology: Research on ocean wave 
+spectrum inversion technology, shallow-water bathymetry and underwater 
+topographical mensuration technology, marine surface and underwater dynamics, 
+coastal belt survey technology; sea-ice monitoring technology, and sea-surface 
+oil pollution monitoring technology. 
+
+(3) Spaceborne-SAR ocean formal applications research: Coastal belt and island 
+survey applied technology, sea-ice monitoring applied technology, sea-surface 
+oil pollution monitoring applied research, marine dynamic environment applied 
+research, and naval military applied research. 
+Research described above will raise the level of spaceborne-SAR ocean 
+applications and applied technology in China to or near the 1990s international 
+advanced level. It will fully prepare the way for a launch of China's own SAR 
+satellite and ocean applications. 
