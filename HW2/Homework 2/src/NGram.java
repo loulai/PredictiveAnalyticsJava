@@ -4,7 +4,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.LinkedHashSet;
 import java.util.Map;
-public class NGram {
+public class NGram extends Preprocessing{
 
 	public int windowSize;
 	public ArrayList<String> rows;
@@ -31,17 +31,17 @@ public class NGram {
 	
 	public void printNGram() {
 		//column header
-		System.out.printf("%-10s ", ""); //padding for row
+		System.out.printf("%-14s ", ""); //padding for row
 		for(String key:columnsMap.keySet()) {
-			System.out.printf("%-10s ", key);
+			System.out.printf("%-14s ", key);
 		}
 		System.out.println();
 		
 		//rows
 		for(int i = 0; i < nRow; i++) {
-			System.out.printf("%-10s ", rows.get(i)); //current row (e.g. "the")
+			System.out.printf("%-14s ", rows.get(i)); //current row (e.g. "the")
 			for(String key:columnsMap.keySet()) { //iterates over all columns for that row
-				System.out.printf("%-10d ", columnsMap.get(key).get(i)); 
+				System.out.printf("%-14d ", columnsMap.get(key).get(i)); 
 			}
 			System.out.println();
 		}
@@ -79,17 +79,15 @@ public class NGram {
 				} 
 			}
 		}
-		
-	
+		//printing
 		for(int i = 0; i < grandResults.size(); i++) {
 			String[] currentArray = grandResults.get(i);
 			for(int k = 0; k < currentArray.length; k++) {
-				System.out.printf("%-10s ", currentArray[k]); //"the "
+				System.out.printf("%-14s ", currentArray[k]); //"the "
 			}
 			System.out.println();
 		}
-		return grandResults;
-		
+		return grandResults;	
 	}
 	
 	public static void main(String[] args) {

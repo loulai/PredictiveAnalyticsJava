@@ -95,6 +95,7 @@ public class DescriptiveModeling {
                 System.out.printf("[%8s]\n\t%11s   %s\n", word, lemma, ne);
             }
         }
+        
     }
 }
 
