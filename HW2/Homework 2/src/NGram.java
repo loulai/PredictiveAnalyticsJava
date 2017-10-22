@@ -64,19 +64,19 @@ public class NGram {
 	}
 	
 	public ArrayList<String[]> getConcurrent(int threshold){
-		ArrayList<String[]> grandResults = new ArrayList<String[]>(); // return: [ ["the", "the", "0"], ["the", "theme", "1"] ]
+		ArrayList<String[]> grandResults = new ArrayList<String[]>(); 
 		
 		for(int i = 0; i < nRow; i++) { 
 			for(String key:this.columnsMap.keySet()) {
 				String currentRow = this.rows.get(i); //"the"
-				String currentColumn = key; //"theme"
+				String currentColumn = key;           //"theme"
 				int currentFreq = this.columnsMap.get(key).get(i); //"0"
 				
-				//compile one result
-				String[] oneResult = {currentRow, currentColumn, String.valueOf(currentFreq)};
-				
-				//append to grandResults
-				grandResults.add(oneResult);
+				//only select words that appear together >= threshold value
+				if(currentFreq >= threshold) {
+					String[] oneResult = {currentRow, currentColumn, String.valueOf(currentFreq)};
+					grandResults.add(oneResult);
+				} 
 			}
 		}
 		
@@ -101,13 +101,6 @@ public class NGram {
 		myNGram.printNGram();
 		System.out.println("-----------------------");
 		myNGram.getConcurrent(2);
-		/*
-		Map<String, Integer> mappy = new HashMap<>();
-		mappy.put("hello", 1);
-		mappy.put("bye", 2);
-		System.out.println(mappy.get("hello"));
-		*/
-		
 	}
 	
 
