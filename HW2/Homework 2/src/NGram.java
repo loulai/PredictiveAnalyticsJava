@@ -6,22 +6,6 @@ import java.util.LinkedHashSet;
 import java.util.Map;
 public class NGram {
 
-	public static void main(String[] args) {
-		
-		ArrayList<String> test = new ArrayList<String>(Arrays.asList("the theme theme".split(" ")));
-		NGram myNGram = new NGram(test);
-		myNGram.addFrequencies(2);
-		myNGram.printNGram();
-		/*
-		Map<String, Integer> mappy = new HashMap<>();
-		mappy.put("hello", 1);
-		mappy.put("bye", 2);
-		System.out.println(mappy.get("hello"));
-		*/
-		
-	}
-	
-
 	public int windowSize;
 	public ArrayList<String> rows;
 	public Map<String, ArrayList<Integer>> columnsMap;
@@ -73,21 +57,58 @@ public class NGram {
 			int currentFreq = columnsMap.get(followingWord).get(rowPosition);
 			int newFreq = currentFreq + 1;
 			
-			//update
+			//update 
 			columnsMap.get(followingWord).set(rowPosition, newFreq);
 		}
-		
-		/*
-		for(int i = 0; i < nRow - 1; i++) {
-			String currentWord = rows.get(i);
-			String followingWord = rows.get(i + 1);
-			
-			int currentFrequency = columnsMap.get(followingWord).get(i);
-			System.out.printf("%-10d ", columnsMap.get(followingWord).set(i, currentFrequency + 1)); 
-		
-		}
-		*/
 		return this;
 	}
+	
+	public ArrayList<String[]> getConcurrent(int threshold){
+		ArrayList<String[]> grandResults = new ArrayList<String[]>(); // return: [ ["the", "the", "0"], ["the", "theme", "1"] ]
+		
+		for(int i = 0; i < nRow; i++) { 
+			for(String key:this.columnsMap.keySet()) {
+				String currentRow = this.rows.get(i); //"the"
+				String currentColumn = key; //"theme"
+				int currentFreq = this.columnsMap.get(key).get(i); //"0"
+				
+				//compile one result
+				String[] oneResult = {currentRow, currentColumn, String.valueOf(currentFreq)};
+				
+				//append to grandResults
+				grandResults.add(oneResult);
+			}
+		}
+		
+	
+		for(int i = 0; i < grandResults.size(); i++) {
+			String[] currentArray = grandResults.get(i);
+			for(int k = 0; k < currentArray.length; k++) {
+				System.out.printf("%-10s ", currentArray[k]); //"the "
+			}
+			System.out.println();
+		}
+		return grandResults;
+		
+	}
+	
+	public static void main(String[] args) {
+		
+		ArrayList<String> test = new ArrayList<String>(Arrays.asList("today we sent mail to the mail person but the mail truck is late".split(" ")));
+		NGram myNGram = new NGram(test);
+		myNGram.addFrequencies(2);
+		System.out.println("---------TABLE---------");
+		myNGram.printNGram();
+		System.out.println("-----------------------");
+		myNGram.getConcurrent(2);
+		/*
+		Map<String, Integer> mappy = new HashMap<>();
+		mappy.put("hello", 1);
+		mappy.put("bye", 2);
+		System.out.println(mappy.get("hello"));
+		*/
+		
+	}
+	
 
 }
