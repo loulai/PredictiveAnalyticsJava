@@ -15,7 +15,7 @@ public class NGram extends Preprocessing{
 	
 	public NGram(ArrayList<String> textList) {
 		initialTextList = textList;
-		ArrayList<String> uniqueTextArray = new ArrayList<String>(new LinkedHashSet<String>(textList)); //unique tokens 
+		ArrayList<String> uniqueTextArray = toUnique(textList); //unique tokens 
 		
 		rows = uniqueTextArray;
 		nRow = rows.size();
