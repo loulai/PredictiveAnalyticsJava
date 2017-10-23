@@ -19,7 +19,9 @@ public class TFIDF extends Preprocessing {
 		corpus[6] = new File("/home/louiselai88gmail/Desktop/programming/pa/java/HW2/DataSet/C1/article07.txt");
 		corpus[7] = new File("/home/louiselai88gmail/Desktop/programming/pa/java/HW2/DataSet/C1/article08.txt");
 
-		double tfidf = getTFIDFVerbose("aviation", targetFile, corpus);
+	//	double tfidf = getTFIDFVerbose("aviation", targetFile, corpus);
+		ArrayList<String> grandFile = mergeDocs(corpus);
+		System.out.print(grandFile);
 		
 	}
 	
@@ -80,12 +82,19 @@ public class TFIDF extends Preprocessing {
 		System.out.printf("numDocsContainingWord: %d\n", numDocsContainingWord);
 		System.out.printf(">>> IDF: %f\n", idf);
 		System.out.printf(">>> TFIDF: %f\n", tfidf);
-	
 		return tfidf;
-	
 	}
 	
-	private static ArrayList<String> (File[] corpus){
-		
+	private static ArrayList<String> mergeDocs(File[] corpus){
+		ArrayList<String> grandArrayList = new ArrayList<String>();
+
+		//append each word in each doc to Grand arrayList
+		for(int i = 0; i < corpus.length; i++) {
+			ArrayList<String> doc = convertFileToArrayList(corpus[i]); 
+			for (int k =0; k < doc.size();k++) {
+				grandArrayList.add(doc.get(k));
+			}
+		}
+		return grandArrayList;
 	}
 }
