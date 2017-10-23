@@ -1,4 +1,8 @@
-**Louise Y. Lai N12709809 ll2663 Predictive Analytics**
+**Louise Y. Lai***
+
+***N12709809 ll2663***
+
+***Predictive Analytics**
 
 **Submission 1, Oct 22 2017**
 
