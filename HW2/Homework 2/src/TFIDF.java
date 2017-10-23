@@ -2,28 +2,13 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashMap;
 import java.util.LinkedHashSet;
+import java.util.Map;
 import java.util.Scanner;
 
 public class TFIDF extends Preprocessing {
-
-	public static void main(String[] args) {
-		File targetFile = new File("/home/louiselai88gmail/Desktop/programming/pa/java/HW2/DataSet/C1/article01.txt");
-		File[] corpus = new File[8];
-		corpus[0] = new File("/home/louiselai88gmail/Desktop/programming/pa/java/HW2/DataSet/C1/article01.txt");
-		corpus[1] = new File("/home/louiselai88gmail/Desktop/programming/pa/java/HW2/DataSet/C1/article02.txt");
-		corpus[2] = new File("/home/louiselai88gmail/Desktop/programming/pa/java/HW2/DataSet/C1/article03.txt");
-		corpus[3] = new File("/home/louiselai88gmail/Desktop/programming/pa/java/HW2/DataSet/C1/article04.txt");
-		corpus[4] = new File("/home/louiselai88gmail/Desktop/programming/pa/java/HW2/DataSet/C1/article05.txt");
-		corpus[5] = new File("/home/louiselai88gmail/Desktop/programming/pa/java/HW2/DataSet/C1/article06.txt");
-		corpus[6] = new File("/home/louiselai88gmail/Desktop/programming/pa/java/HW2/DataSet/C1/article07.txt");
-		corpus[7] = new File("/home/louiselai88gmail/Desktop/programming/pa/java/HW2/DataSet/C1/article08.txt");
-
-	//	double tfidf = getTFIDFVerbose("aviation", targetFile, corpus);
-		ArrayList<String> grandFile = mergeDocs(corpus);
-		System.out.print(grandFile);
-		
-	}
 	
 	public static int getTF(String word, File file) {
 		int termFreq = 0;
@@ -96,5 +81,63 @@ public class TFIDF extends Preprocessing {
 			}
 		}
 		return grandArrayList;
+	}
+	
+	public TFIDF(File[] corpus) {
+		ArrayList<String> grandArrayList = mergeDocs(corpus);
+		ArrayList<String> terms = toUnique(grandArrayList);
+		Map<String, ArrayList<Integer>> columnsMap = new HashMap(); // each doc is a column
+		
+		for(int i=0;i < corpus.length; i++) { //create doc1:[0, 0, 0, 0] for each doc
+			ArrayList<Integer> tfidf = new ArrayList<>(Collections.nCopies(terms.size(), 0)); //initialize all zeros
+			columnsMap.put(String.valueOf(i), tfidf);
+		}
+		
+		//setting values
+		uniqueTerms = terms;
+		this.columnsMap = columnsMap;
+		nRow = terms.size();
+		nCol = corpus.length;
+	}
+	
+	public Map<String, ArrayList<Integer>> columnsMap;
+	public ArrayList<String> uniqueTerms;
+	public int nRow;
+	public int nCol;
+	//ArrayList<String> initialTextList;
+	
+	public void printTFIDF() {
+		//column header
+		System.out.printf("%-14s ", ""); //padding for row
+		for(String key:columnsMap.keySet()) {
+			System.out.printf("%-14s ", key);
+		}
+		System.out.println();
+		
+		//rows
+		for(int i = 0; i < nRow; i++) {
+			System.out.printf("%-14s ", uniqueTerms.get(i)); //current row (e.g. "the")
+			for(String key:columnsMap.keySet()) { //iterates over all columns for that row
+				System.out.printf("%-14d ", columnsMap.get(key).get(i)); 
+			}
+			System.out.println();
+		}
+	}
+	
+	public static void main(String[] args) {
+		File targetFile = new File("/home/louiselai88gmail/Desktop/programming/pa/java/HW2/DataSet/C1/article01.txt");
+		File[] corpus = new File[8];
+		corpus[0] = new File("/home/louiselai88gmail/Desktop/programming/pa/java/HW2/DataSet/C1/article01.txt");
+		corpus[1] = new File("/home/louiselai88gmail/Desktop/programming/pa/java/HW2/DataSet/C1/article02.txt");
+		corpus[2] = new File("/home/louiselai88gmail/Desktop/programming/pa/java/HW2/DataSet/C1/article03.txt");
+		corpus[3] = new File("/home/louiselai88gmail/Desktop/programming/pa/java/HW2/DataSet/C1/article04.txt");
+		corpus[4] = new File("/home/louiselai88gmail/Desktop/programming/pa/java/HW2/DataSet/C1/article05.txt");
+		corpus[5] = new File("/home/louiselai88gmail/Desktop/programming/pa/java/HW2/DataSet/C1/article06.txt");
+		corpus[6] = new File("/home/louiselai88gmail/Desktop/programming/pa/java/HW2/DataSet/C1/article07.txt");
+		corpus[7] = new File("/home/louiselai88gmail/Desktop/programming/pa/java/HW2/DataSet/C1/article08.txt");
+
+		TFIDF testTFIDF = new TFIDF(corpus);
+		testTFIDF.printTFIDF();
+		
 	}
 }
