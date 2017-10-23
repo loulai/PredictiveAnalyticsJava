@@ -9,9 +9,9 @@
 # Homework 2, Descriptive Modeling
 Parent class: Preprocessing.java
 
-Children    : NGram.java, TFIDF.java
+Child class: NGram.java, TFIDF.java
 
-Independent : DescriptiveModeling.java
+Independent class: DescriptiveModeling.java
 
 # Class Desciptions
 
