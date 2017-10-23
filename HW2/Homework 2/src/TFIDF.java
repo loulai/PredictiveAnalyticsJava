@@ -86,10 +86,10 @@ public class TFIDF extends Preprocessing {
 	public TFIDF(File[] corpus) {
 		ArrayList<String> grandArrayList = mergeDocs(corpus);
 		ArrayList<String> terms = toUnique(grandArrayList);
-		Map<String, ArrayList<Integer>> columnsMap = new HashMap(); // each doc is a column
+		Map<String, ArrayList<Double>> columnsMap = new HashMap(); // each doc is a column
 		
 		for(int i=0;i < corpus.length; i++) { //create doc1:[0, 0, 0, 0] for each doc
-			ArrayList<Integer> tfidf = new ArrayList<>(Collections.nCopies(terms.size(), 0)); //initialize all zeros
+			ArrayList<Double> tfidf = new ArrayList<>(Collections.nCopies(terms.size(), 0.0)); //initialize all zeros
 			columnsMap.put(String.valueOf(i), tfidf);
 		}
 		
@@ -98,12 +98,14 @@ public class TFIDF extends Preprocessing {
 		this.columnsMap = columnsMap;
 		nRow = terms.size();
 		nCol = corpus.length;
+		mainCorpus = corpus;
 	}
 	
-	public Map<String, ArrayList<Integer>> columnsMap;
+	public Map<String, ArrayList<Double>> columnsMap;
 	public ArrayList<String> uniqueTerms;
 	public int nRow;
 	public int nCol;
+	public File[] mainCorpus;
 	//ArrayList<String> initialTextList;
 	
 	public void printTFIDF() {
@@ -118,10 +120,24 @@ public class TFIDF extends Preprocessing {
 		for(int i = 0; i < nRow; i++) {
 			System.out.printf("%-14s ", uniqueTerms.get(i)); //current row (e.g. "the")
 			for(String key:columnsMap.keySet()) { //iterates over all columns for that row
-				System.out.printf("%-14d ", columnsMap.get(key).get(i)); 
+				System.out.printf("%-14f ", columnsMap.get(key).get(i)); 
 			}
 			System.out.println();
 		}
+	}
+	
+	public TFIDF addFrequencies(int n) {
+	
+		for(int i = 0; i< nCol; i++) {
+			for(int k=0; k< nRow; k++) {
+				String currentWord = uniqueTerms.get(k);
+				double tfidf = getTFIDF(currentWord, mainCorpus[i], mainCorpus);
+				
+				//update
+				columnsMap.get(String.valueOf(i)).set(k,  tfidf);
+			}
+		}
+		return this;
 	}
 	
 	public static void main(String[] args) {
