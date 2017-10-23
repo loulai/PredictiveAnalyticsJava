@@ -1,8 +1,8 @@
-##### Louise Y. Lai
-##### N12709809 
-##### ll2663
-##### Predictive Analytics
-##### Submission 1, Oct 22 2017
+**Louise Y. Lai**
+**N12709809**
+**ll2663**
+**Predictive Analytics**
+**Submission 1, Oct 22 2017**
 
 # Homework 2, Descriptive Modeling
 Parent class: Preprocessing.java
