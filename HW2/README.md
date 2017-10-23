@@ -20,7 +20,7 @@ This is the parent class because it contains preprocessing methods that can be i
 
 Functions: convert file to ArrayList, punctuation removal, extract unique terms.
 
-### DescrpitiveModeling.java
+### DescriptiveModeling.java
 Implements tokenization, lemmatization, Named Entity Tagging, and removes stopwords using the Stanford NLP Library.
 
 ### NGram.java
