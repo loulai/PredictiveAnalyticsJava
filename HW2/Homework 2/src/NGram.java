@@ -91,7 +91,6 @@ public class NGram extends Preprocessing{
 	}
 	
 	public static void main(String[] args) {
-		
 		ArrayList<String> test = new ArrayList<String>(Arrays.asList("today we sent mail to the mail person but the mail truck is late".split(" ")));
 		NGram myNGram = new NGram(test);
 		myNGram.addFrequencies(2);

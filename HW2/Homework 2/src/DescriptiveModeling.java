@@ -83,7 +83,6 @@ public class DescriptiveModeling {
         }
         System.out.println(modifiedTextList);
         
-       
  		//test NGram
  		NGram testNGram = new NGram(modifiedTextList);
  		testNGram.printNGram();

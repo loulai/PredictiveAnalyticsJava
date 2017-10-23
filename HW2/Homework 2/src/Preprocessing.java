@@ -8,7 +8,6 @@ import java.util.Scanner;
 public class Preprocessing {
 
 	public static void main(String[] args) {
-	
 	}
 	
 	public static ArrayList<String> convertFileToArrayList(File file)  {
@@ -25,7 +24,6 @@ public class Preprocessing {
 		finalArrayList = preprocess(finalString);
 		return finalArrayList;
 	}
-
 	
 	public static ArrayList<String> preprocess(String textString){
 		ArrayList<String> finalArrayList = new ArrayList<String>();

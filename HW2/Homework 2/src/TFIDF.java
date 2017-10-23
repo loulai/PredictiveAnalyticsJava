@@ -126,7 +126,7 @@ public class TFIDF extends Preprocessing {
 		}
 	}
 	
-	public TFIDF addFrequencies(int n) {
+	public TFIDF addTFIDF() {
 	
 		for(int i = 0; i< nCol; i++) {
 			for(int k=0; k< nRow; k++) {
@@ -141,7 +141,6 @@ public class TFIDF extends Preprocessing {
 	}
 	
 	public static void main(String[] args) {
-		File targetFile = new File("/home/louiselai88gmail/Desktop/programming/pa/java/HW2/DataSet/C1/article01.txt");
 		File[] corpus = new File[8];
 		corpus[0] = new File("/home/louiselai88gmail/Desktop/programming/pa/java/HW2/DataSet/C1/article01.txt");
 		corpus[1] = new File("/home/louiselai88gmail/Desktop/programming/pa/java/HW2/DataSet/C1/article02.txt");
@@ -153,6 +152,7 @@ public class TFIDF extends Preprocessing {
 		corpus[7] = new File("/home/louiselai88gmail/Desktop/programming/pa/java/HW2/DataSet/C1/article08.txt");
 
 		TFIDF testTFIDF = new TFIDF(corpus);
+		testTFIDF.addTFIDF();
 		testTFIDF.printTFIDF();
 		
 	}
