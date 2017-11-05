@@ -133,6 +133,57 @@ public class NGram extends Preprocessing{
 		myNGram.printNGram();
 		System.out.println("-----------------------");
 		myNGram.getConcurrent(3);
+		
+		// starts 
+		File[][] allData = new File[15][];
+		allData[0] = new File[8];
+		allData[1] = new File[8];
+		allData[2] = new File[4];
+		allData[3] = new File[8];
+		allData[4] = new File[13];
+		allData[5] = new File[5];
+		allData[6] = new File[8];
+		allData[7] = new File[10];
+		allData[8] = new File[4];
+		allData[9] = new File[18];
+		allData[10] = new File[8];
+		allData[11] = new File[10];
+		allData[12] = new File[7];
+		allData[13] = new File[5];
+		allData[14] = new File[6];
+		
+		for(int i = 0; i < allData.length; i++){
+			String corpusNum = "C" + i;
+			for(int k = 0; k<allData[i].length; k++){
+				if(k < 10){
+					String articleNum = "article0" + k + ".txt";
+				}else{
+					String articleNum = "article" + k + ".txt";
+				}
+			}
+		}
+		
+		for(int i = 0; i<allData.length; i++){
+			ArrayList<String> bigTest = convertFileToArrayList(corpus[1]);
+			NGram myNGram = new NGram(bigTest);
+			myNGram.addFrequencies(2);
+			System.out.println("---------TABLE---------");
+			myNGram.printNGram();
+			System.out.println("-----------------------");
+			myNGram.getConcurrent(3);
+		}
+			
+		c1[0] = new File("./../DataSet/C1/article01.txt");
+		corpus[1] = new File("./../DataSet/C1/article02.txt");
+		ArrayList<String> bigTest = convertFileToArrayList(corpus[1]);
+		NGram myNGram = new NGram(bigTest);
+		myNGram.addFrequencies(2);
+		System.out.println("---------TABLE---------");
+		myNGram.printNGram();
+		System.out.println("-----------------------");
+		myNGram.getConcurrent(3);
+		
+		
 	}
 	
 
