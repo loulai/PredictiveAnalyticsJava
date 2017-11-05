@@ -1,3 +1,5 @@
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -89,15 +91,21 @@ public class NGram extends Preprocessing{
 		}
 		return grandResults;	
 	}
+	public void printKeyWords
 	
-	public static void main(String[] args) {
-		ArrayList<String> test = new ArrayList<String>(Arrays.asList("today we sent mail to the mail person but the mail truck is late".split(" ")));
-		NGram myNGram = new NGram(test);
+	
+	public static void main(String[] args) throws FileNotFoundException {
+		//ArrayList<String> test = new ArrayList<String>(Arrays.asList("today we sent mail to the mail person but the mail truck is late".split(" ")));
+		File[] corpus = new File[2];
+		corpus[0] = new File("./../DataSet/C1/article01.txt");
+		corpus[1] = new File("./../DataSet/C1/article02.txt");
+		ArrayList<String> bigTest = convertFileToArrayList(corpus[1]);
+		NGram myNGram = new NGram(bigTest);
 		myNGram.addFrequencies(2);
 		System.out.println("---------TABLE---------");
 		myNGram.printNGram();
 		System.out.println("-----------------------");
-		myNGram.getConcurrent(2);
+		myNGram.getConcurrent(3);
 	}
 	
 
