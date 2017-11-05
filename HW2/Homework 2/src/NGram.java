@@ -136,19 +136,7 @@ public class NGram extends Preprocessing{
 	
 	
 	public static void main(String[] args) throws FileNotFoundException {
-		/*
-		//ArrayList<String> test = new ArrayList<String>(Arrays.asList("today we sent mail to the mail person but the mail truck is late".split(" ")));
-		File[] corpus = new File[2];
-		corpus[0] = new File("./../DataSet/C1/article01.txt");
-		corpus[1] = new File("./../DataSet/C1/article02.txt");
-		ArrayList<String> bigTest = convertFileToArrayList(corpus[1]);
-		NGram myNGram = new NGram(bigTest);
-		myNGram.addFrequencies(2);
-		System.out.println("---------TABLE---------");
-		myNGram.printNGram();
-		System.out.println("-----------------------");
-		myNGram.getConcurrent(3);
-		*/
+	
 		File[][] grandData = new File[15][];
 		grandData[0] = new File[8];
 		grandData[1] = new File[8];
@@ -180,13 +168,22 @@ public class NGram extends Preprocessing{
 			}
 		}
 	
-		ArrayList<String> bigTest = convertFileToArrayList(grandData[0][0]);
-		NGram myNGram = new NGram(bigTest);
-		myNGram.addFrequencies(2);
-		System.out.println("---------TABLE---------");
-		myNGram.printNGram();
-		System.out.println("-----------------------");
-		myNGram.getConcurrent(3);
+		//evaluate everything
+		for (int i = 0; i < grandData.length; i++) {
+			for(int k = 0; k < grandData[i].length; k++) {
+				ArrayList<String> fileString = convertFileToArrayList(grandData[i][k]);
+				NGram myNGram = new NGram(fileString);
+				myNGram.addFrequencies(2);
+				/* Grader: uncomment to see tables
+				 * System.out.println("---------TABLE---------");
+				 * myNGram.printNGram();
+				 * System.out.println("-----------------------");
+				 */
+				
+				myNGram.getConcurrent(2); //get words occuring more than twice together
+			}
+		}
+		
 	}
 	
 

@@ -15,6 +15,7 @@ import edu.stanford.nlp.ling.CoreAnnotations.TokensAnnotation;
 import edu.stanford.nlp.pipeline.Annotation;
 import edu.stanford.nlp.pipeline.StanfordCoreNLP;
 import edu.stanford.nlp.util.CoreMap;
+import edu.stanford.nlp.util.logging.RedwoodConfiguration;
 
 public class Preprocessing {
 
@@ -73,11 +74,12 @@ public class Preprocessing {
 		
 		Properties props = new Properties(); 
         props.setProperty("annotators","tokenize, ssplit, pos, lemma, ner"); 
+        RedwoodConfiguration.current().clear().apply();
         StanfordCoreNLP pipeline = new StanfordCoreNLP(props);
         pipeline = new StanfordCoreNLP(props, false);
     
         finalArrayList.clear();
-        Annotation document = pipeline.process(text);  
+        Annotation document = pipeline.process(text); 
 
         for(CoreMap sentence: document.get(SentencesAnnotation.class))
         {    
