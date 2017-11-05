@@ -10,7 +10,14 @@ import java.util.Scanner;
 
 public class TFIDF extends Preprocessing {
 	
-	public static int getTF(String word, File file) {
+	public Map<String, ArrayList<Double>> columnsMap;
+	public ArrayList<String> uniqueTerms;
+	public int nRow;
+	public int nCol;
+	public File[] mainCorpus;
+	//ArrayList<String> initialTextList;
+	
+	public static int getTF(String word, File file) throws FileNotFoundException {
 		int termFreq = 0;
 		ArrayList<String> doc = convertFileToArrayList(file);
 		for(int i=0; i < doc.size(); i++) {
@@ -21,7 +28,7 @@ public class TFIDF extends Preprocessing {
 		return termFreq;
 	}
 	
-	public static double getIDF(String word, File[] corpus) {
+	public static double getIDF(String word, File[] corpus) throws FileNotFoundException {
 		int docsContainingWord = getNumDocsContaingWord(word, corpus);
 		double idf = 0;
 		if(docsContainingWord == 0) {
@@ -33,7 +40,7 @@ public class TFIDF extends Preprocessing {
 		return idf;
 	}
 	
-	public static int getNumDocsContaingWord(String word, File[] corpus) {
+	public static int getNumDocsContaingWord(String word, File[] corpus) throws FileNotFoundException {
 		int totalDocs = corpus.length;
 		int docsContainingWord = 0;
 
@@ -49,14 +56,14 @@ public class TFIDF extends Preprocessing {
 		return docsContainingWord;
 	}
 	
-	public static double getTFIDF(String word, File targetFile, File[] corpus) {
+	public static double getTFIDF(String word, File targetFile, File[] corpus) throws FileNotFoundException {
 		int tf = getTF(word,targetFile);
 		double idf = getIDF(word, corpus);
 		double tfidf = tf * idf;
 		return tfidf;
 	}
 	
-	public static double getTFIDFVerbose(String word, File targetFile, File[] corpus) { //same code, except with print statements
+	public static double getTFIDFVerbose(String word, File targetFile, File[] corpus) throws FileNotFoundException { //same code but with print statements
 		int tf = getTF(word,targetFile);
 		double idf = getIDF(word, corpus);
 		double tfidf = tf * idf;
@@ -70,10 +77,10 @@ public class TFIDF extends Preprocessing {
 		return tfidf;
 	}
 	
-	private static ArrayList<String> mergeDocs(File[] corpus){
+	private static ArrayList<String> mergeDocs(File[] corpus) throws FileNotFoundException{
 		ArrayList<String> grandArrayList = new ArrayList<String>();
 
-		//append each word in each doc to Grand arrayList
+		//append each word in each doc to grand arrayList
 		for(int i = 0; i < corpus.length; i++) {
 			ArrayList<String> doc = convertFileToArrayList(corpus[i]); 
 			for (int k =0; k < doc.size();k++) {
@@ -83,7 +90,7 @@ public class TFIDF extends Preprocessing {
 		return grandArrayList;
 	}
 	
-	public TFIDF(File[] corpus) {
+	public TFIDF(File[] corpus) throws FileNotFoundException {
 		ArrayList<String> grandArrayList = mergeDocs(corpus);
 		ArrayList<String> terms = toUnique(grandArrayList);
 		Map<String, ArrayList<Double>> columnsMap = new HashMap(); // each doc is a column
@@ -100,13 +107,7 @@ public class TFIDF extends Preprocessing {
 		nCol = corpus.length;
 		mainCorpus = corpus;
 	}
-	
-	public Map<String, ArrayList<Double>> columnsMap;
-	public ArrayList<String> uniqueTerms;
-	public int nRow;
-	public int nCol;
-	public File[] mainCorpus;
-	//ArrayList<String> initialTextList;
+
 	
 	public void printTFIDF() {
 		//column header
@@ -126,8 +127,7 @@ public class TFIDF extends Preprocessing {
 		}
 	}
 	
-	public TFIDF addTFIDF() {
-	
+	public TFIDF addTFIDF() throws FileNotFoundException {
 		for(int i = 0; i< nCol; i++) {
 			for(int k=0; k< nRow; k++) {
 				String currentWord = uniqueTerms.get(k);
@@ -140,17 +140,18 @@ public class TFIDF extends Preprocessing {
 		return this;
 	}
 	
-	public static void main(String[] args) {
-		File[] corpus = new File[8];
+	public static void main(String[] args) throws FileNotFoundException {
+		File[] corpus = new File[2];
 		corpus[0] = new File("/home/louiselai88gmail/Desktop/programming/pa/java/HW2/DataSet/C1/article01.txt");
 		corpus[1] = new File("/home/louiselai88gmail/Desktop/programming/pa/java/HW2/DataSet/C1/article02.txt");
+		/*
 		corpus[2] = new File("/home/louiselai88gmail/Desktop/programming/pa/java/HW2/DataSet/C1/article03.txt");
 		corpus[3] = new File("/home/louiselai88gmail/Desktop/programming/pa/java/HW2/DataSet/C1/article04.txt");
 		corpus[4] = new File("/home/louiselai88gmail/Desktop/programming/pa/java/HW2/DataSet/C1/article05.txt");
 		corpus[5] = new File("/home/louiselai88gmail/Desktop/programming/pa/java/HW2/DataSet/C1/article06.txt");
 		corpus[6] = new File("/home/louiselai88gmail/Desktop/programming/pa/java/HW2/DataSet/C1/article07.txt");
 		corpus[7] = new File("/home/louiselai88gmail/Desktop/programming/pa/java/HW2/DataSet/C1/article08.txt");
-
+		 */
 		TFIDF testTFIDF = new TFIDF(corpus);
 		testTFIDF.addTFIDF();
 		testTFIDF.printTFIDF();
