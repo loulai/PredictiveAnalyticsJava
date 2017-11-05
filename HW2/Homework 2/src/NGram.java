@@ -91,7 +91,34 @@ public class NGram extends Preprocessing{
 		}
 		return grandResults;	
 	}
-	public void printKeyWords
+	
+	public void printKeyWords() {
+		File[] c1 = new File[8];
+		File[] c2 = new File[8];
+		File[] c3 = new File[4];
+		File[] c4 = new File[8];
+		File[] c5 = new File[13];
+		File[] c6 = new File[5];
+		File[] c7 = new File[8];
+		File[] c8 = new File[10];
+		File[] c9 = new File[4];
+		File[] c10 = new File[18];
+		File[] c11 = new File[8];
+		File[] c12 = new File[10];
+		File[] c13 = new File[7];
+		File[] c14 = new File[5];
+		File[] c15 = new File[6];
+		
+		c1[0] = new File("./../DataSet/C1/article01.txt");
+		corpus[1] = new File("./../DataSet/C1/article02.txt");
+		ArrayList<String> bigTest = convertFileToArrayList(corpus[1]);
+		NGram myNGram = new NGram(bigTest);
+		myNGram.addFrequencies(2);
+		System.out.println("---------TABLE---------");
+		myNGram.printNGram();
+		System.out.println("-----------------------");
+		myNGram.getConcurrent(3);
+	}
 	
 	
 	public static void main(String[] args) throws FileNotFoundException {
