@@ -92,26 +92,40 @@ public class NGram extends Preprocessing{
 		return grandResults;	
 	}
 	
-	public void printKeyWords() {
-		File[] c1 = new File[8];
-		File[] c2 = new File[8];
-		File[] c3 = new File[4];
-		File[] c4 = new File[8];
-		File[] c5 = new File[13];
-		File[] c6 = new File[5];
-		File[] c7 = new File[8];
-		File[] c8 = new File[10];
-		File[] c9 = new File[4];
-		File[] c10 = new File[18];
-		File[] c11 = new File[8];
-		File[] c12 = new File[10];
-		File[] c13 = new File[7];
-		File[] c14 = new File[5];
-		File[] c15 = new File[6];
+	public void printKeyWords() throws FileNotFoundException {
+		File[][] grandData = new File[15][];
+		grandData[0] = new File[8];
+		grandData[1] = new File[8];
+		grandData[2] = new File[4];
+		grandData[3] = new File[8];
+		grandData[4] = new File[13];
+		grandData[5] = new File[5];
+		grandData[6] = new File[8];
+		grandData[7] = new File[10];
+		grandData[8] = new File[4];
+		grandData[9] = new File[18];
+		grandData[10] = new File[8];
+		grandData[11] = new File[10];
+		grandData[12] = new File[7];
+		grandData[13] = new File[5];
+		grandData[14] = new File[6];
 		
-		c1[0] = new File("./../DataSet/C1/article01.txt");
-		corpus[1] = new File("./../DataSet/C1/article02.txt");
-		ArrayList<String> bigTest = convertFileToArrayList(corpus[1]);
+		for (int i = 0; i < grandData.length; i++) {
+			String corpusNum = "C" + i + "";
+			for(int k = 0; k < grandData[i].length; k++) {
+				String articleNum = "";
+				if(k < 10) {
+					articleNum = "article0" + k + ".txt";
+				} else {
+					articleNum = "article" + k + ".txt";
+				}
+				
+				grandData[i][k] = new File("./../DataSet/" + corpusNum + "/" + articleNum);
+				//File testFile = new File("./../DataSet/C1/article01.txt");
+			}
+		}
+	
+		ArrayList<String> bigTest = convertFileToArrayList(grandData[0][0]);
 		NGram myNGram = new NGram(bigTest);
 		myNGram.addFrequencies(2);
 		System.out.println("---------TABLE---------");
@@ -122,11 +136,51 @@ public class NGram extends Preprocessing{
 	
 	
 	public static void main(String[] args) throws FileNotFoundException {
+		/*
 		//ArrayList<String> test = new ArrayList<String>(Arrays.asList("today we sent mail to the mail person but the mail truck is late".split(" ")));
 		File[] corpus = new File[2];
 		corpus[0] = new File("./../DataSet/C1/article01.txt");
 		corpus[1] = new File("./../DataSet/C1/article02.txt");
 		ArrayList<String> bigTest = convertFileToArrayList(corpus[1]);
+		NGram myNGram = new NGram(bigTest);
+		myNGram.addFrequencies(2);
+		System.out.println("---------TABLE---------");
+		myNGram.printNGram();
+		System.out.println("-----------------------");
+		myNGram.getConcurrent(3);
+		*/
+		File[][] grandData = new File[15][];
+		grandData[0] = new File[8];
+		grandData[1] = new File[8];
+		grandData[2] = new File[4];
+		grandData[3] = new File[8];
+		grandData[4] = new File[13];
+		grandData[5] = new File[5];
+		grandData[6] = new File[8];
+		grandData[7] = new File[10];
+		grandData[8] = new File[4];
+		grandData[9] = new File[18];
+		grandData[10] = new File[8];
+		grandData[11] = new File[10];
+		grandData[12] = new File[7];
+		grandData[13] = new File[5];
+		grandData[14] = new File[6];
+		
+		for (int i = 0; i < grandData.length; i++) {
+			String corpusNum = "C" + (i+1) + "";
+			for(int k = 0; k < grandData[i].length; k++) {
+				String articleNum = "";
+				if(k < 10) {
+					articleNum = "article0" + (k+1) + ".txt";
+				} else {
+					articleNum = "article" + (k+1) + ".txt";
+				}
+				
+				grandData[i][k] = new File("./../DataSet/" + corpusNum + "/" + articleNum);
+			}
+		}
+	
+		ArrayList<String> bigTest = convertFileToArrayList(grandData[0][0]);
 		NGram myNGram = new NGram(bigTest);
 		myNGram.addFrequencies(2);
 		System.out.println("---------TABLE---------");
