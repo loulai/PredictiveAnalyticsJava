@@ -172,8 +172,8 @@ public class NGram extends Preprocessing{
 			}
 		}
 	
+
 		*/
-		
 		
 	}
 	
