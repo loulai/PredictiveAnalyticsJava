@@ -74,7 +74,7 @@ public class Preprocessing {
 		
 		Properties props = new Properties(); 
         props.setProperty("annotators","tokenize, ssplit, pos, lemma, ner"); 
-        RedwoodConfiguration.current().clear().apply();
+        RedwoodConfiguration.current().clear().apply(); //suppress warnings
         StanfordCoreNLP pipeline = new StanfordCoreNLP(props);
         pipeline = new StanfordCoreNLP(props, false);
     
