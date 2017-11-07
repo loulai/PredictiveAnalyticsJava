@@ -17,10 +17,9 @@ public class TFIDF extends Preprocessing {
 	public File[] mainCorpus;
 	//ArrayList<String> initialTextList;
 	
-	public static int getTF(String word, File file) throws FileNotFoundException {
+	public static int getTF(String word, ArrayList<String> doc) throws FileNotFoundException {
 		int termFreq = 0;
-		ArrayList<String> doc = convertFileToArrayList(file);
-		for(int i=0; i < doc.size(); i++) {
+		for(int i = 0; i < doc.size(); i++) {
 			if(word.equals(doc.get(i))) {
 				termFreq++;
 			}
@@ -41,10 +40,9 @@ public class TFIDF extends Preprocessing {
 	}
 	
 	public static int getNumDocsContaingWord(String word, File[] corpus) throws FileNotFoundException {
-		int totalDocs = corpus.length;
 		int docsContainingWord = 0;
 
-		for(int i = 0; i < totalDocs; i++) { //search every doc for the target word
+		for(int i = 0; i < corpus.length; i++) { //search every doc for the target word
 			ArrayList<String> currentDoc = convertFileToArrayList(corpus[i]);
 			for(int k=0; k < currentDoc.size(); k++) { 
 				if(word.equals(currentDoc.get(k))) {
@@ -56,26 +54,13 @@ public class TFIDF extends Preprocessing {
 		return docsContainingWord;
 	}
 	
-	public static double getTFIDF(String word, File targetFile, File[] corpus) throws FileNotFoundException {
-		int tf = getTF(word,targetFile);
+	public static double getTFIDF(String word, File file, File[] corpus) throws FileNotFoundException {
+		ArrayList<String> targetFile = convertFileToArrayList(file);
+		int tf = getTF(word, targetFile);
 		double idf = getIDF(word, corpus);
 		double tfidf = tf * idf;
 		return tfidf;
-	}
-	
-	public static double getTFIDFVerbose(String word, File targetFile, File[] corpus) throws FileNotFoundException { //same code but with print statements
-		int tf = getTF(word,targetFile);
-		double idf = getIDF(word, corpus);
-		double tfidf = tf * idf;
-		int numDocsContainingWord = getNumDocsContaingWord(word, corpus);
-		System.out.printf("Target Word: %s\n", word);
-		System.out.printf(">>> TF: %d\n", tf);
-		System.out.printf("corpusSize: %d\n", corpus.length);
-		System.out.printf("numDocsContainingWord: %d\n", numDocsContainingWord);
-		System.out.printf(">>> IDF: %f\n", idf);
-		System.out.printf(">>> TFIDF: %f\n", tfidf);
-		return tfidf;
-	}
+	}	
 	
 	private static ArrayList<String> mergeDocs(File[] corpus) throws FileNotFoundException{
 		ArrayList<String> grandArrayList = new ArrayList<String>();
@@ -108,7 +93,6 @@ public class TFIDF extends Preprocessing {
 		mainCorpus = corpus;
 	}
 
-	
 	public void printTFIDF() {
 		//column header
 		System.out.printf("%-14s ", ""); //padding for row
@@ -156,5 +140,20 @@ public class TFIDF extends Preprocessing {
 		testTFIDF.addTFIDF();
 		testTFIDF.printTFIDF();
 		
+	}
+	
+	public static double getTFIDFVerbose(String word, File file, File[] corpus) throws FileNotFoundException { //same code but with print statements
+		ArrayList<String> targetFile = convertFileToArrayList(file);
+		int tf = getTF(word, targetFile);
+		double idf = getIDF(word, corpus);
+		double tfidf = tf * idf;
+		int numDocsContainingWord = getNumDocsContaingWord(word, corpus);
+		System.out.printf("Target Word: %s\n", word);
+		System.out.printf(">>> TF: %d\n", tf);
+		System.out.printf("corpusSize: %d\n", corpus.length);
+		System.out.printf("numDocsContainingWord: %d\n", numDocsContainingWord);
+		System.out.printf(">>> IDF: %f\n", idf);
+		System.out.printf(">>> TFIDF: %f\n", tfidf);
+		return tfidf;
 	}
 }

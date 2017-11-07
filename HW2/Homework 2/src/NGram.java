@@ -108,7 +108,7 @@ public class NGram extends Preprocessing{
 		        dataset[cIndex] = new File[articleNames.length]; // e.g. dataset[0] = new File[8]
 		        
 		        for(int k = 0; k < articleNames.length; k++) {
-			    	System.out.printf("\t%s\n", articleNames[k].getName());
+			    	//System.out.printf("\t%s\n", articleNames[k].getName());
 			    	String articleName = articleNames[k].getName();
 			    	dataset[cIndex][k] = new File("./../DataSet/C" + (cIndex+1) + "/" + articleName);
 			      }
@@ -116,19 +116,20 @@ public class NGram extends Preprocessing{
 		      }
 		 
 		 //evaluate everything
-		for (int i = 0; i < dataset.length; i++) {
-			System.out.println("Corpus" + i);
+		for (int i = 0; i < 3; i++) {
+			System.out.println("----------- Corpus " + i + " -----------");
 			for(int k = 0; k < dataset[i].length; k++) {
 				ArrayList<String> fileString = convertFileToArrayList(dataset[i][k]);
 				NGram myNGram = new NGram(fileString);
 				myNGram.addFrequencies(2);
-				/* Grader: uncomment to see tables
+				
+				/* Grader: uncomment to see similarity matrix
 				 * System.out.println("---------TABLE---------");
 				 * myNGram.printNGram();
 				 * System.out.println("-----------------------");
 				 */
 				
-				myNGram.getConcurrent(3); //get words occuring more than twice together
+				myNGram.getConcurrent(3); //get words occuring more than n times
 			}
 		}
 	

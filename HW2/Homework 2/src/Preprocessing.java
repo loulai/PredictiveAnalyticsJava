@@ -69,6 +69,7 @@ public class Preprocessing {
 			}
 		 }
 		
+		/*
 		// lemmatization
 		String text = String.join(" ", finalArrayList.toArray(new String[0])); // the string you want; 
 		
@@ -90,10 +91,11 @@ public class Preprocessing {
                  * String token = token.get(TextAnnotation.class).toLowerCase(); 
                  * String ne = token.get(NamedEntityTagAnnotation.class).toLowerCase();
                  * System.out.printf("word: %12s NER:%12s\n", token, ne);
-                 */
+                 */ /*
                 finalArrayList.add(lemma);
             }
         }
+		*/
 		
 		//finalArrayList = new ArrayList<String>(Arrays.asList(textArray)); //convert String[] to ArrayList<String>. Keep in case don't want to remove stopwords
 		return finalArrayList;
