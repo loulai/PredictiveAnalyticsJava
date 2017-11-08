@@ -63,9 +63,8 @@ public class TFIDF extends Preprocessing {
 	}	
 	
 	private static ArrayList<String> mergeDocs(File[] corpus) throws FileNotFoundException{
-		ArrayList<String> grandArrayList = new ArrayList<String>();
-
 		//append each word in each doc to grand arrayList
+		ArrayList<String> grandArrayList = new ArrayList<String>();
 		for(int i = 0; i < corpus.length; i++) {
 			ArrayList<String> doc = convertFileToArrayList(corpus[i]); 
 			for (int k =0; k < doc.size();k++) {
@@ -125,20 +124,40 @@ public class TFIDF extends Preprocessing {
 	}
 	
 	public static void main(String[] args) throws FileNotFoundException {
-		File[] corpus = new File[2];
-		corpus[0] = new File("/home/louiselai88gmail/Desktop/programming/pa/java/HW2/DataSet/C1/article01.txt");
-		corpus[1] = new File("/home/louiselai88gmail/Desktop/programming/pa/java/HW2/DataSet/C1/article02.txt");
-		/*
-		corpus[2] = new File("/home/louiselai88gmail/Desktop/programming/pa/java/HW2/DataSet/C1/article03.txt");
-		corpus[3] = new File("/home/louiselai88gmail/Desktop/programming/pa/java/HW2/DataSet/C1/article04.txt");
-		corpus[4] = new File("/home/louiselai88gmail/Desktop/programming/pa/java/HW2/DataSet/C1/article05.txt");
-		corpus[5] = new File("/home/louiselai88gmail/Desktop/programming/pa/java/HW2/DataSet/C1/article06.txt");
-		corpus[6] = new File("/home/louiselai88gmail/Desktop/programming/pa/java/HW2/DataSet/C1/article07.txt");
-		corpus[7] = new File("/home/louiselai88gmail/Desktop/programming/pa/java/HW2/DataSet/C1/article08.txt");
-		 */
-		TFIDF testTFIDF = new TFIDF(corpus);
-		testTFIDF.addTFIDF();
-		testTFIDF.printTFIDF();
+	
+		File[] datasetNames = new File("./../DataSet").listFiles();
+		//int numCorpra = datasetNames.length; //comment out during development because there are two extra files
+		int numCorpra = 15;
+		File[][] dataset = new File[15][];
+		
+		//read files
+		 for (int i = 0; i < datasetNames.length; i++) {
+		      if (datasetNames[i].isDirectory()) {
+		    	int cIndex = Integer.valueOf(datasetNames[i].getName().replace("C", "")) - 1;
+		        //System.out.println("Directory: " + (cIndex + 1));
+		        
+		        File[] articleNames = datasetNames[i].listFiles();
+		        dataset[cIndex] = new File[articleNames.length]; // e.g. dataset[0] = new File[8]
+		        
+		        for(int k = 0; k < articleNames.length; k++) {
+			    	//System.out.printf("\t%s\n", articleNames[k].getName());
+			    	String articleName = articleNames[k].getName();
+			    	dataset[cIndex][k] = new File("./../DataSet/C" + (cIndex+1) + "/" + articleName);
+			      }
+			    }
+		      }
+		
+		//TFIDF everything *** WARNING: TAKES A LONG TIME ***
+		for (int i = 0; i < 1; i++) {
+			System.out.println("----------- Corpus " + (i+1) + " -----------");
+			File[] oneCorpus = new File[3]; //replace num with:
+			for(int k = 0; k < 3; k++) {    //dataset[i].length (two lines)
+				oneCorpus[k] = dataset[i][k];
+			}
+			TFIDF myTFIDF = new TFIDF(oneCorpus);
+			myTFIDF.addTFIDF();
+			myTFIDF.printTFIDF();
+		}
 		
 	}
 	
@@ -157,3 +176,4 @@ public class TFIDF extends Preprocessing {
 		return tfidf;
 	}
 }
+
